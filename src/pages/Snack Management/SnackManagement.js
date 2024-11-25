@@ -16,8 +16,8 @@ const SnackManagement = () => {
     const handleDeleteSnack = async (snackId) => {
         const confirmDelete = window.confirm('Bạn có chắc chắn muốn xóa người dùng này?');
         if (confirmDelete) {
-            await deleteSnack(snackId); // Gọi hàm xóa người dùng
-            loadSnacks(); // Tải lại danh sách người dùng sau khi xóa
+            await deleteSnack(snackId); 
+            loadSnacks(); 
         }
     };
     return (

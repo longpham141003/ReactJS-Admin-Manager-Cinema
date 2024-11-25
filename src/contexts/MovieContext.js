@@ -18,7 +18,6 @@ export const MovieProvider = ({ children }) => {
   });
   const [movies, setMovies] = useState([]);
 
-  // Function to update specific fields of movieDetails
   const updateMovieDetails = (field, value) => {
     setMovieDetails(prevDetails => ({
       ...prevDetails,

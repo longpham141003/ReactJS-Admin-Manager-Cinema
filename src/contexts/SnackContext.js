@@ -11,7 +11,6 @@ export const SnackProvider = ({ children }) => {
   });
   const [snacks, setSnacks] = useState([]);
 
-  // Function to update specific fields of snackDetails
   const updateSnackDetails = (field, value) => {
     setSnackDetails(prevDetails => ({
       ...prevDetails,

@@ -11,7 +11,6 @@ export const UserProvider = ({ children }) => {
     });
     const [users, setUsers] = useState([]);
 
-    // Function to update specific fields of userDetails
     const updateUserDetails = (field, value) => {
         setUserDetails(prevDetails => ({
             ...prevDetails,

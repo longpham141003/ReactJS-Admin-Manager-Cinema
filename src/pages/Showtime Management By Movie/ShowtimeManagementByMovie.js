@@ -1,5 +1,5 @@
 import React from 'react';
-import "./showtimemanagement.css"; // Đảm bảo có file CSS tương ứng
+import "./showtimemanagement.css"; 
 import Button from "../../components/button";
 import ActionToolbar from '../../components/ActionToolbar';
 import Panigation from "../../components/Panigation";
@@ -28,13 +28,11 @@ const ShowtimeManagementByMovie = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {/* Ví dụ cho phim "Avengers: Endgame" có nhiều rạp và phòng chiếu */}
                             <tr>
                                 <td colSpan="8" className="movie-title">
                                     <strong>Avengers: Endgame</strong>
                                 </td>
                             </tr>
-                            {/* Rạp 1 */}
                             <tr>
                                 <td>
                                     <input type="checkbox" />
@@ -73,7 +71,6 @@ const ShowtimeManagementByMovie = () => {
                                     </button>
                                 </td>
                             </tr>
-                            {/* Rạp 2 */}
                             <tr>
                                 <td colSpan="8" className="theater-title">
                                     <strong>BHD Star</strong>
@@ -117,7 +114,6 @@ const ShowtimeManagementByMovie = () => {
                                     </button>
                                 </td>
                             </tr>
-                            {/* Thêm các phim khác nếu cần */}
                         </tbody>
                     </table>
                 </div>

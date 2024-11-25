@@ -1,25 +1,22 @@
-// src/pages/AccountManagement.js
 import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import Button from '../../components/button';
 import ActionToolbar from '../../components/ActionToolbar';
 import Pagination from '../../components/Panigation';
-import { useUsers } from '../../hooks'; // Đảm bảo bạn đã có hook này
-import useDeleteUser from '../../hooks/user/useDeleteUser'; // Nhập hook xóa người dùng
+import { useUsers } from '../../hooks';
+import useDeleteUser from '../../hooks/user/useDeleteUser';
 import './accountmanagement.css';
 
 const AccountManagement = () => {
     const navigate = useNavigate();
     const { users, loading, errorMessage, loadUsers } = useUsers();
-    const { deleteUser, loading: deleteLoading, errorMessage: deleteError } = useDeleteUser(); 
-    
-    
+    const { deleteUser, loading: deleteLoading, errorMessage: deleteError } = useDeleteUser();
 
     const handleDeleteUser = async (userId) => {
         const confirmDelete = window.confirm('Bạn có chắc chắn muốn xóa người dùng này?');
         if (confirmDelete) {
-            await deleteUser(userId); // Gọi hàm xóa người dùng
-            loadUsers(); // Tải lại danh sách người dùng sau khi xóa
+            await deleteUser(userId);
+            loadUsers();
         }
     };
 

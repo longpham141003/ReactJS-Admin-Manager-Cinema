@@ -1,18 +1,17 @@
 import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { useMovie } from '../../hooks/movie/useMovie'; // Import custom hook
+import { useMovie } from '../../hooks/movie/useMovie'; 
 
 const MovieDetail = () => {
-  const { movieId } = useParams(); // Lấy movieId từ URL
+  const { movieId } = useParams(); 
   const navigate = useNavigate();
-  const { movies, loading, errorMessage, loadMovies } = useMovie(); // Lấy movies từ custom hook
+  const { movies, loading, errorMessage, loadMovies } = useMovie(); 
 
-  // Tìm bộ phim theo ID từ danh sách phim
   const movie = movies.find((movie) => movie._id === movieId);
 
   useEffect(() => {
     if (!movies.length) {
-      loadMovies(); // Nếu danh sách phim chưa được tải, tải danh sách phim
+      loadMovies(); 
     }
   }, [movies, loadMovies]);
 

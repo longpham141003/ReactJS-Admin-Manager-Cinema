@@ -1,5 +1,5 @@
 import React from 'react';
-import "./paymentmanagement.css"; // Đảm bảo có file CSS tương ứng
+import "./paymentmanagement.css"; 
 import Button from "../../components/button";
 import ActionToolbar from '../../components/ActionToolbar';
 import Panigation from "../../components/Panigation";
@@ -29,7 +29,6 @@ const PaymentManagement = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {/* Dữ liệu mẫu */}
                             <tr>
                                 <td>
                                     <input type="checkbox" />
@@ -70,7 +69,6 @@ const PaymentManagement = () => {
                                 </td>
                                 <td>Ghi chú thêm</td>
                             </tr>
-                            {/* Thêm các hàng khác nếu cần */}
                         </tbody>
                     </table>
                 </div>

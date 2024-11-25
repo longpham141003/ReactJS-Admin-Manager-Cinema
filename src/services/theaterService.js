@@ -9,7 +9,6 @@ const getToken = () => {
 };
 
 
-// Lấy danh sách rạp
 export const getTheaterList = async () => {
   const token = getToken(); 
 

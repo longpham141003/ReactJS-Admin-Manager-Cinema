@@ -8,7 +8,6 @@ const getToken = () => {
   return token;
 };
 
-// Lấy danh sách người dùng
 export const getUserList = async () => {
   const token = getToken(); 
 
@@ -25,7 +24,6 @@ export const getUserList = async () => {
   }
 };
 
-// Xoá người dùng theo ID
 export const deleteUserById = async (userId) => {
   const token = getToken(); 
 
@@ -43,7 +41,6 @@ export const deleteUserById = async (userId) => {
 };
 
 
-// Lấy thông tin chi tiết của một người dùng
 export const getUserById = async (userId) => {
   const token = getToken(); 
 
@@ -60,14 +57,12 @@ export const getUserById = async (userId) => {
   }
 };
 
-// Tạo mới một người dùng
 export const createUser = async (userData) => {
   const token = getToken();
 
   console.log("User data being sent:", userData);
 
   try {
-    // Chỉnh sửa URL endpoint thành '/create'
     const response = await api.post('/users/create', userData, {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -82,9 +77,8 @@ export const createUser = async (userData) => {
 
 
 
-// Cập nhật thông tin người dùng
 export const updateUser = async (userId, updatedData) => {
-  const token = getToken(); // Gọi hàm lấy token nếu cần thiết
+  const token = getToken(); 
 
   try {
     const response = await api.put(`/users/${userId}`, updatedData, {

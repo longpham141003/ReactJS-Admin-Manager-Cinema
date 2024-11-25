@@ -19,7 +19,6 @@ const EditAccount = () => {
     const handleChange = (e) => {
         const { name, value } = e.target;
 
-        // Cập nhật giá trị state tương ứng
         switch (name) {
             case 'fullName':
                 setFullName(value);
@@ -41,7 +40,6 @@ const EditAccount = () => {
         }
     };
 
-    // Hàm xử lý khi form được submit
     const handleSubmit = async (e) => {
         e.preventDefault();
         const success = await editUser(); 
@@ -50,7 +48,6 @@ const EditAccount = () => {
         }
     };
 
-    // Hiển thị thông báo nếu đang tải hoặc có lỗi
     if (loading) return <p>Đang tải thông tin người dùng...</p>;
     if (errorMessage) return <p className="error-message">{errorMessage}</p>;
 
@@ -91,7 +88,7 @@ const EditAccount = () => {
                         id="email"
                         name="email"
                         placeholder="Nhập email"
-                        value={email || ''} // Đảm bảo có giá trị mặc định
+                        value={email || ''} 
                         onChange={handleChange}
                         required
                     />
@@ -104,7 +101,7 @@ const EditAccount = () => {
                         id="phone"
                         name="phone"
                         placeholder="Nhập số điện thoại"
-                        value={phone || ''} // Đảm bảo có giá trị mặc định
+                        value={phone || ''} 
                         onChange={handleChange}
                         required
                     />
@@ -115,7 +112,7 @@ const EditAccount = () => {
                     <select
                         id="role"
                         name="role"
-                        value={role || 'Khách hàng'} // Đảm bảo có giá trị mặc định
+                        value={role || 'Khách hàng'} 
                         onChange={handleChange}
                     >
                         <option value="admin">Admin</option>

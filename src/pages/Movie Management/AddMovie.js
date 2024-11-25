@@ -1,5 +1,5 @@
 import React from 'react';
-import "./moviemanagement.css"; // Sử dụng CSS giống như trong MovieManagement
+import "./moviemanagement.css"; 
 import Button from "../../components/button";
 import { useNavigate } from 'react-router-dom';
 import { useAddMovie } from '../../hooks/movie/useAddMovie';
@@ -83,7 +83,7 @@ const AddMovie = () => {
                                 <input
                                 type="file"
                                 id="image"
-                                onChange={(e) => setImage(e.target.files[0])} // Lưu file vào state
+                                onChange={(e) => setImage(e.target.files[0])} 
                                 />
                             </div>
                         </div>
@@ -94,7 +94,7 @@ const AddMovie = () => {
                                 <input
                                 type="file"
                                 id="poster"
-                                onChange={(e) => setPoster(e.target.files[0])} // Lưu file vào state
+                                onChange={(e) => setPoster(e.target.files[0])} 
                                 />
                             </div>
                             <div className="form-group">
@@ -102,7 +102,7 @@ const AddMovie = () => {
                                 <input
                                 type="file"
                                 id="trailer"
-                                onChange={(e) => setTrailer(e.target.files[0])} // Lưu file vào state
+                                onChange={(e) => setTrailer(e.target.files[0])} 
                                 />
                             </div>
                         </div>

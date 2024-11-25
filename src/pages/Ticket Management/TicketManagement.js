@@ -3,7 +3,7 @@ import "./ticketmanagement.css";
 import Button from "../../components/button";
 import ActionToolbar from '../../components/ActionToolbar';
 import Panigation from "../../components/Panigation";
-import TicketDetails from './TicketDetails'; // Chỉnh sửa tên component ở đây
+import TicketDetails from './TicketDetails';
 const tickets = [
     {
         id: 1,
@@ -17,7 +17,6 @@ const tickets = [
         bookingTime: "2024-10-02 12:00:00",
         totalAmount: "120000đ",
     },
-    // Thêm dữ liệu vé ở đây...
 ];
 const TicketManagement = () => {
     const [selectedTicketId, setSelectedTicketId] = useState(null);

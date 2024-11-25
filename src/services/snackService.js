@@ -64,7 +64,6 @@ export const updateSnack = async (snackId, updatedData) => {
 };
 
 
-// laasi chi tiết  1 sp
 export const getSnackById = async (snackId) => {
   const token = getToken(); 
 
@@ -82,7 +81,6 @@ export const getSnackById = async (snackId) => {
   }
 };
 
-// Xoá người dùng theo ID
 export const deleteSnackById = async (snackId) => {
   const token = getToken(); 
 

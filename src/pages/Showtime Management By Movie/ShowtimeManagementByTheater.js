@@ -1,5 +1,5 @@
 import React from 'react';
-import "./showtimemanagement.css"; // Đảm bảo có file CSS tương ứng
+import "./showtimemanagement.css"; 
 import Button from "../../components/button";
 import ActionToolbar from '../../components/ActionToolbar';
 import Panigation from "../../components/Panigation";
@@ -28,7 +28,6 @@ const ShowtimeManagementByTheater = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {/* Rạp 1 */}
                             <tr>
                                 <td colSpan="8" className="theater-title">
                                     <strong>CGV Vincom</strong>
@@ -73,7 +72,6 @@ const ShowtimeManagementByTheater = () => {
                                 </td>
                             </tr>
 
-                            {/* Rạp 2 */}
                             <tr>
                                 <td colSpan="8" className="theater-title">
                                     <strong>BHD Star</strong>
@@ -117,7 +115,6 @@ const ShowtimeManagementByTheater = () => {
                                     </button>
                                 </td>
                             </tr>
-                            {/* Thêm các rạp và suất chiếu khác nếu cần */}
                         </tbody>
                     </table>
                 </div>

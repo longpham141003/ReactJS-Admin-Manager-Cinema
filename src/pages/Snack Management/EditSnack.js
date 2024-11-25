@@ -1,13 +1,11 @@
 import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { useEditSnack } from '../../hooks/snack/useEditSnack'; // Đảm bảo đường dẫn chính xác
-import './snackmanagement.css'; // Sử dụng lại CSS từ trang quản lý snack
-
+import { useEditSnack } from '../../hooks/snack/useEditSnack';
+import './snackmanagement.css'; 
 const EditSnack = () => {
-    const { snackId } = useParams(); // Lấy snackId từ URL
+    const { snackId } = useParams(); 
     console.log("Snack ID từ URL:", snackId);
 
-    // Sử dụng hook để lấy dữ liệu snack
     const {
         name, setName,
         image, setImage,
@@ -18,11 +16,9 @@ const EditSnack = () => {
 
     const navigate = useNavigate();
 
-    // Hàm xử lý thay đổi giá trị trong các input
     const handleChange = (e) => {
         const { name, value } = e.target;
 
-        // Cập nhật giá trị state tương ứng
         switch (name) {
             case 'name':
                 setName(value);
@@ -38,21 +34,19 @@ const EditSnack = () => {
         }
     };
 
-    // Hàm xử lý khi form được submit
     const handleSubmit = async (e) => {
         e.preventDefault();
         
-        const success = await editSnack(); // Gọi editSnack từ hook
+        const success = await editSnack();
          console.log("Kết quả chỉnh sửa snack:", success);
         if (success) {
             alert("Cập nhật snack thành công!");
-            navigate('/admin/snackmanagement'); // Quay lại trang quản lý snack nếu thành công
+            navigate('/admin/snackmanagement'); 
         } else {
             alert("Cập nhật snack thất bại!");
         }
     };
 
-    // Hiển thị thông báo nếu đang tải hoặc có lỗi
     if (loading) return <p>Đang tải thông tin snack...</p>;
     if (errorMessage) return <p className="error-message">{errorMessage}</p>;
 
@@ -69,7 +63,7 @@ const EditSnack = () => {
                                 id="name"
                                 name="name"
                                 placeholder="Nhập tên sản phẩm"
-                                value={name || ''} // Đảm bảo có giá trị mặc định
+                                value={name || ''} 
                                 onChange={handleChange}
                                 required
                             />
@@ -81,7 +75,7 @@ const EditSnack = () => {
                                 id="price"
                                 name="price"
                                 placeholder="Nhập giá sản phẩm"
-                                value={price || ''} // Đảm bảo có giá trị mặc định
+                                value={price || ''} 
                                 onChange={handleChange}
                                 required
                             />
@@ -93,7 +87,7 @@ const EditSnack = () => {
                                 id="quantity"
                                 name="quantity"
                                 placeholder="Nhập số lượng"
-                                value={quantity || ''} // Đảm bảo có giá trị mặc định
+                                value={quantity || ''} 
                                 onChange={handleChange}
                                 required
                             />
@@ -105,7 +99,7 @@ const EditSnack = () => {
                         <input
                             type="file"
                             id="image"
-                            onChange={(e) => setImage(e.target.files[0])}  // Lưu file ảnh
+                            onChange={(e) => setImage(e.target.files[0])}  
                         />
                     </div>
 
